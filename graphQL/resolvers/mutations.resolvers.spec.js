@@ -5,6 +5,7 @@ jest.mock('../../models/index', () => ({
   Topics: {
     create: jest.fn(),
     findAll: jest.fn(),
+    update: jest.fn(),
   },
 
   Roadmaps: {
@@ -48,26 +49,11 @@ describe('Mutations', () => {
       expect(fakeDb.Roadmaps.create).toHaveBeenCalledWith(createRoadmapInput);
     });
   });
-
-  describe('updateRoadmap', () => {
-    it('should update & return road map, given valid input', async () => {
-      //  Given
-      const updateRoadmapInput = { title: 'title', category: 'category' };
-      fakeDb.Roadmaps.update.mockResolvedValue([null, [{ dataValues: {} }]]);
-
-      //  When
-      const result = await mutations.updateRoadmap(null, { id: 'id', ...updateRoadmapInput });
-
-      //  Then
-      expect(fakeDb.Roadmaps.update).toHaveBeenCalledWith(updateRoadmapInput, { where: { id: 'id' }, returning: true });
-      expect(result).toEqual({ ...updateRoadmapInput.dataValues });
-    });
-  });
-
+  
   describe('deleteRoadmap', () => {
     it('should delete Roadmaps given valid input & return id', async () => {
       // Given
-
+      
       const id = 'id';
       fakeDb.Roadmaps.destroy.mockResolvedValue({});
       // When
@@ -76,7 +62,7 @@ describe('Mutations', () => {
       expect(fakeDb.Roadmaps.destroy).toHaveBeenCalledWith({ where: { id } });
       expect(result).toEqual(id);
     });
-
+    
     it('should throw Error "Roadmap does not exist"', async () => {
       // Given
       const deleteRoadmapInput = { id: undefined };
@@ -88,5 +74,43 @@ describe('Mutations', () => {
         expect(err.toString()).toEqual('Error: Roadmap does not exist');
       }
     });
+    
+    describe('updateRoadmap', () => {
+        it('should update & return road map, given valid input', async () => {
+          //  Given
+          const updateRoadmapInput = { title: 'title', category: 'category' };
+          fakeDb.Roadmaps.update.mockResolvedValue([null, [{ dataValues: {} }]]);
+    
+          //  When
+          const result = await mutations.updateRoadmap(null, { id: 'id', ...updateRoadmapInput });
+    
+          //  Then
+          expect(fakeDb.Roadmaps.update).toHaveBeenCalledWith(updateRoadmapInput, { where: { id: 'id' }, returning: true });
+          expect(result).toEqual({ ...updateRoadmapInput.dataValues });
+        });
+      });
+
+  describe('updateTopic', () => {
+    it('should update & return topic', async () => {
+      // Given
+      const args = { 
+        title: 'title', 
+        description: 'description', 
+        resources: 'resources', 
+        completed: Boolean,
+        rowNumber: 5,
+      };
+      const updateTopicInput = args;
+      fakeDb.Topics.update.mockResolvedValue([null, [{ dataValues: {} }]])
+      // When
+      const result = await mutations.updateTopic(null, {id: 'id', ...updateTopicInput});
+
+    //  Then
+    expect(fakeDb.Topics.update).toHaveBeenCalledWith(updateTopicInput, { where: { id: 'id' }, returning: true });
+    expect(result).toEqual({ ...updateTopicInput.dataValues})
+    })
+  })
   });
+
+
 });

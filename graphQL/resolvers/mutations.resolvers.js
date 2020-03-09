@@ -66,6 +66,7 @@ exports.createTopic = async (obj, { title, rowNumber, RoadmapId }) => {
   return { ...topic.dataValues, checklist: [] };
 };
 
+// done
 exports.updateTopic = async (obj, args) => {
   const {
     id,
@@ -87,11 +88,20 @@ exports.updateTopic = async (obj, args) => {
   return update[1][0].dataValues;
 };
 
+
+
+
+
 exports.deleteTopic = async (obj, { id }) => {
   const deletion = await db.Topics.destroy({ where: { id } });
   if (!deletion) throw new Error('Topic does not exist');
   return id;
 };
+
+
+
+
+
 
 exports.createChecklistItem = async (obj, { TopicId, title }) => {
   const checklistItem = await db.ChecklistItems.create({
