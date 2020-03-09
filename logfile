@@ -1,0 +1,52 @@
+2020-03-05 10:24:17.067 EST [42547] LOG:  starting PostgreSQL 12.2 on x86_64-apple-darwin19.3.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.17), 64-bit
+2020-03-05 10:24:17.068 EST [42547] LOG:  listening on IPv6 address "::1", port 5432
+2020-03-05 10:24:17.068 EST [42547] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-03-05 10:24:17.069 EST [42547] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-03-05 10:24:17.083 EST [42548] LOG:  database system was shut down at 2020-03-05 10:21:55 EST
+2020-03-05 10:24:17.087 EST [42547] LOG:  database system is ready to accept connections
+2020-03-05 11:26:56.875 EST [43467] FATAL:  database "Rahul.Krish" does not exist
+2020-03-05 12:25:08.777 EST [44734] FATAL:  database "Rahul.Krish" does not exist
+2020-03-06 12:50:08.200 EST [58154] LOG:  invalid length of startup packet
+2020-03-06 12:50:33.446 EST [58161] LOG:  invalid length of startup packet
+2020-03-06 12:50:33.788 EST [58162] LOG:  invalid length of startup packet
+2020-03-06 12:50:33.790 EST [58165] LOG:  invalid length of startup packet
+2020-03-06 12:50:33.796 EST [58166] LOG:  invalid length of startup packet
+2020-03-06 12:50:38.836 EST [58169] LOG:  invalid length of startup packet
+2020-03-06 12:50:41.218 EST [58170] LOG:  invalid length of startup packet
+2020-03-06 12:50:41.221 EST [58172] LOG:  invalid length of startup packet
+2020-03-06 12:50:41.227 EST [58173] LOG:  invalid length of startup packet
+2020-03-06 12:51:11.297 EST [58181] LOG:  invalid length of startup packet
+2020-03-06 12:51:11.300 EST [58182] LOG:  invalid length of startup packet
+2020-03-06 12:51:11.307 EST [58183] LOG:  invalid length of startup packet
+2020-03-06 12:51:29.896 EST [58199] LOG:  invalid length of startup packet
+2020-03-06 12:51:30.012 EST [58200] LOG:  invalid length of startup packet
+2020-03-06 12:51:30.015 EST [58201] LOG:  invalid length of startup packet
+2020-03-06 12:51:30.020 EST [58202] LOG:  invalid length of startup packet
+2020-03-06 12:51:35.069 EST [58204] LOG:  invalid length of startup packet
+2020-03-06 12:51:35.072 EST [58205] LOG:  invalid length of startup packet
+2020-03-06 12:51:35.077 EST [58206] LOG:  invalid length of startup packet
+2020-03-06 12:51:43.152 EST [58211] LOG:  invalid length of startup packet
+2020-03-06 12:51:43.164 EST [58212] LOG:  invalid length of startup packet
+2020-03-06 12:51:43.175 EST [58213] LOG:  invalid length of startup packet
+2020-03-06 12:51:50.971 EST [58215] LOG:  invalid length of startup packet
+2020-03-06 12:52:11.404 EST [58222] LOG:  invalid length of startup packet
+2020-03-06 12:52:21.144 EST [58223] LOG:  invalid length of startup packet
+2020-03-06 12:52:21.149 EST [58238] LOG:  invalid length of startup packet
+2020-03-06 12:52:39.894 EST [58255] LOG:  invalid length of startup packet
+2020-03-06 12:53:37.620 EST [58271] LOG:  invalid length of startup packet
+2020-03-06 12:53:59.078 EST [58284] LOG:  invalid length of startup packet
+2020-03-06 12:54:11.478 EST [58298] LOG:  invalid length of startup packet
+2020-03-06 12:54:11.704 EST [58299] LOG:  invalid length of startup packet
+2020-03-06 12:54:11.706 EST [58301] LOG:  invalid length of startup packet
+2020-03-06 12:54:11.710 EST [58302] LOG:  invalid length of startup packet
+2020-03-06 12:54:16.752 EST [58304] LOG:  invalid length of startup packet
+2020-03-06 12:54:37.614 EST [58781] LOG:  invalid length of startup packet
+2020-03-06 12:54:46.787 EST [58795] LOG:  invalid length of startup packet
+2020-03-06 12:54:46.793 EST [58796] LOG:  invalid length of startup packet
+2020-03-06 12:54:46.800 EST [58797] LOG:  invalid length of startup packet
+2020-03-06 12:55:46.848 EST [58835] LOG:  invalid length of startup packet
+2020-03-06 12:57:11.514 EST [58948] LOG:  invalid length of startup packet
+2020-03-06 13:10:28.157 EST [60269] LOG:  invalid length of startup packet
+2020-03-06 13:10:28.160 EST [60270] LOG:  invalid length of startup packet
+2020-03-06 13:10:28.164 EST [60271] LOG:  invalid length of startup packet
+2020-03-06 13:10:31.008 EST [60273] LOG:  invalid length of startup packet

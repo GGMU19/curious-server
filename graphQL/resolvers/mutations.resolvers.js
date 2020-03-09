@@ -34,23 +34,26 @@ exports.login = async (obj, { email, password }) => {
   return '';
 };
 
+//  done
 exports.createRoadmap = async (obj, { UserId, title, category }) => {
   const roadmap = await db.Roadmaps.create({ title, category, UserId });
   return { ...roadmap.dataValues, topics: [] };
 };
-
+// done
 exports.updateRoadmap = async (obj, { id, title, category }) => {
   const update = await db.Roadmaps.update({ title, category },
     { where: { id }, returning: true });
   return update[1][0].dataValues;
 };
 
+// done
 exports.deleteRoadmap = async (obj, { id }) => {
   const deletion = await db.Roadmaps.destroy({ where: { id } });
   if (!deletion) throw new Error('Roadmap does not exist');
   return id;
 };
 
+// done
 exports.createTopic = async (obj, { title, rowNumber, RoadmapId }) => {
   const rowItems = await db.Topics.findAll({
     where: {
